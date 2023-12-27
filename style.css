@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    --primary: #07152e;
+    --secondary: #0062dc;
+    --third: #0084f7;
+    --alternative: #0041bb;
+  }
+  body {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+  }
+  /* Header */
+  header {
+    width: 100%;
+    height: 150px;
+    background-color: #07152e;
+    display: flex;
+    
+    
+  }
+  header .logo{
+      
+      width: 200px;
+      position: relative;
+      z-index: 10;
+      left: 0;
+      
+    }
+  header .logo img {
+      width: 150px;
+      position: absolute;
+      top: -10px;
+      left: 0; 
+  }
+   
+    .slide-text{
+      width: 50%;
+      color: white;
+      position: absolute;    
+      left: 40%;
+      animation: transform 20s ease-in infinite;
+      
+    }
+    .slide-text p{
+      font-size: 1.4rem;
+  
+  }
+  
+    @keyframes transform {
+       0% {
+          transform: translate( 0,-50%);
+          opacity: 0;
+      } 
+       15% {
+          transform: translate(0 ,100%);
+          opacity: 0.5;
+      }
+      30% {
+          transform: translate(0, 130%);
+          opacity: 1;
+      }
+      45% {
+          transform: translate(0 , 150%);
+          opacity: 1;
+      }
+      55% {
+          transform: translate(0% ,170%);
+          opacity: 1;
+      }
+      60% {
+          transform: translateX(0% ,200%);
+          opacity: 1;
+      }
+      80% {
+        transform: translateX(0% ,250%);
+        opacity: 0.5;
+    }
+      
+      100% {
+          transform: translate(0% ,300%);
+          opacity: 0;
+      }
+  }
+  
+  @media (min-width:768px){
+      .slide-text p{
+          font-size: 1.4rem;
+  
+      }
+      @keyframes transform {
+          0% {
+             transform: translate( 0,-50%);
+             opacity: 0;
+         } 
+          15% {
+             transform: translate(0 ,175%);
+             opacity: 0.5;
+         }
+         30% {
+             transform: translate(0, 250%);
+             opacity: 1;
+         }
+         45% {
+             transform: translateY(400%);
+             opacity: 1;
+         }
+         55% {
+             transform: translate(-150% ,400%);
+             opacity: 1;
+         }
+         60% {
+             transform: translateX(-350% ,400%);
+             opacity: 0.5;
+         }
+         80% {
+             transform: translateX(-150% ,400%);
+             opacity: 0;
+         }
+         100% {
+             transform: translateX(-250% ,400%);
+             opacity: 0;
+         } 
+     }
+  
+  }
+  
+  /* Main */
+  main {
+      width: 100%;
+     
+      
+      
+  }
+  .container-top {
+    width: 100%;
+    /* min-width: 400px; */
+    height: 750px;
+    background-image: url(./src/image/piscine-dar-bibine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .hidden {
+    margin-top: 10px;
+    width: 100%;
+  
+    display: flex;
+  }
+  .hidden a {
+    font-size: 1.4rem;
+    padding: 0 15px;
+    color: var(--primary);
+    transition: 0.5s ease-in-out;
+  }
+  .hidden a:hover {
+    cursor: pointer;
+    color: red;
+  }
+  
+  .menu {
+    display: none;
+   
+    position: absolute;
+    right: 0;
+    
+  }
+  .checkbtn i {
+    font-size: 2rem;
+  }
+  
+  .checkbtn {
+    position: absolute;
+    right: 40px;
+    top: 50px;
+  }
+  .checked {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+  }
+  
+  .hidden {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+  }
+  
+  
+  .checked:checked ~ .menu {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.521);
+    
+  }
+  #home {
+    color: red;
+  }
+  
+  
+    @media (min-width: 768px) {
+      .menu {
+        display: flex;
+        
+        
+      }
+      .hidden {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+      }
+      .menu li a {
+        font-size: 1rem;
+      }
+     
+      .checkbtn,
+      .checked {
+        display: none;
+      }
+      .checked:checked ~ .menu {
+          position: absolute;
+          display: none;
+         
+       }
+    
+  }
+  
+  @media (min-width: 1224px) {
+    .container-top .hidden a {
+      /* background-position: 0 20px;   */
+      font-size: 1.6rem;
+    }
+    .container-top .hidden {
+      /* background-position: 0 20px;   */
+      /* font-size: 1.6rem; */
+      padding-right: 70px;
+      padding-top: 50px;
+    }
+  
+  }
+  /* container middle */
+  .container {
+      /* background: linear-gradient(to bottom, #07152e, #0d3f7c); */
+      width: 100%;
+      height: 300px;
+      display: block;
+     
+    }
+    .synagoge-ghriba {
+      width: 100%;
+      height: 50%;
+      
+      background-image: url(./src/image/toit\ 3\ db.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      
+    }
+    .djerba-hood {
+      width: 100%;
+      height: 50%;
+      background-image: url(./src/image/facade\ 2\ db.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position:  bottom;
+    }
+    .text {
+      width: 100%;
+      height: 50%;
+      margin: auto;
+        }
+  
+        .text h2, span a{
+          text-align: center;
+          padding-top: 10px;
+          color: gold;
+        }
+  
+    .text p {
+      font-size: 0.9rem;
+      color: #07152e;
+      text-align: center;
+      margin: auto;
+      padding-top: 10px;
+      overflow: hidden;
+    }
+  
+    /* media query tablet main */
+       @media (min-width: 768px) {
+          .container {
+              /* background: linear-gradient(to bottom, #07152e, #0d3f7c); */
+              width: 100%;
+              height: 300px;
+              display: flex;
+              
+            }
+            #bottom{
+              flex-direction: row-reverse;
+            }
+           
+            .synagoge-ghriba {
+              width: 50%;
+              height: 100%;
+             
+              background-size: cover;
+              background-position: center;
+            }
+            .djerba-hood {
+              width: 50%;
+              height: 100%;
+              background-size: cover;
+              background-position: center;
+            }
+            .text {
+              width: 50%;
+              height: 300px;
+              margin: auto;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+             
+            }
+            .text h2 p{
+              font-size: 1.8rem;
+            }
+      
+    
+  }
+  @media (min-width: 1224px) {
+      .djerba-hood {
+         
+          background-position:  bottom;
+        }
+        .text h2, p{
+          font-size: 1.6rem;
+        }
+  
+  }
+  
+  
+  footer{
+      height: 200px;
+      /* background-color: var(--primary); */
+  }
+  /* footer */
+  footer {
+      width: 100%;
+      height: 200px;
+      /* background: linear-gradient(to bottom, #07152e, #0d3f7c); */
+      display: flex;
+      justify-content: space-between;
+      border-top: solid 2px var(--secondary);
+    }
+    #map {
+      position: relative;
+      width: 25%; /* Breite später entsprechend anpassen */
+      height: 100%; /* Höhe später entsprechend anpassen */
+    }
+    
+    #map a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-decoration: none;
+    }
+    
+    #map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .kontakt {
+      display: block;
+      margin: auto;
+    }
+    .kontakt h3 {
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    .icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-size: 1rem;
+      padding-top: 10px;
+      /* transition: font-size 1s ease-in; */
+    }
+    /* .icons:hover {
+      font-size: 2rem;
+    } */
+    .icons div {
+      padding: 20px 15px;
+    }
+    @media (max-width: 768px) {
+      .kontakt h3 {
+        color: var(--primary);
+        font-size: 1rem;
+      }
+      .icons p{
+        font-size: 1rem;
+        padding-top: 15px;
+        color: var(--primary);
+      }
+    }
+    @media (min-width: 1024px) {
+      .kontakt h3 {
+        color: white;
+        color: var(--primary);
+      }
+      .icons p{
+        font-size: 1rem;
+        padding-top: 25px;
+        color: var(--primary);
+      }
+    }
+  
